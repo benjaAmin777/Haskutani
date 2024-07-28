@@ -1,0 +1,33 @@
+/* barra de navegacion */
+.navbar{
+    background-color: #838383;
+}
+
+/* botones de sigin/register */
+.custom-btn-signin {
+    background-color: #838383 !important; 
+    border-color: #e9e615 !important;
+    color: #e9e615 !important;
+}
+
+.custom-btn-Register {
+    background-color: #e9e615 !important; 
+    border-color: #e9e615 !important;
+    color: #838383 !important;
+}
+
+/* botones sigin/register: hover */
+.custom-btn-signin:hover {
+    background-color: #838383 !important; 
+    border-color: #b6b412 !important;
+    color: #b6b412 !important;
+}
+
+.custom-btn-Register:hover {
+    background-color: #b6b412 !important; 
+    border-color: #b6b412 !important;
+    color: #838383 !important;
+}
+
+
+

@@ -1,42 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!--metadados-->
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título de la página</title>
+    <meta name="author" content="Haskutani">
+    <meta name="descrption" content="Proyecto Haskutami INNOVATEC">
+    <meta name="keywords" content="HTML, CSS, JavaScript, React">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!--title-->
+   <title>Haskutami</title>
+   <!--favicon-->
+   <link rel="icon" type="image/x-icon" href="images/icon.png">
+    <!--stilos propios-->
+    <link href="style.css" rel="stylesheet">
+    <!--boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 </head>
 <body>
-    <header>
-        <h1>Encabezado Principal</h1>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#seccion1">Sección 1</a></li>
-            <li><a href="#seccion2">Sección 2</a></li>
-            <li><a href="#seccion3">Sección 3</a></li>
-        </ul>
-    </nav>
+    <!-- Navbar: barra de navegación principal -->
+<nav class="navbar">
+    <div class="container-fluid d-flex justify-content-between">
+        <!-- Logo en pantallas medianas y más grandes: imagen del logo -->
+        <a class="navbar-brand d-md-block d-none" href="#">
+            <img src="images/logo-lg.png" alt="Bootstrap" width="auto" height="50">
+        </a>
+        <!-- Logo en pantallas pequeñas y extra pequeñas: imagen del logo -->
+        <a class="navbar-brand d-md-none d-block" href="#">
+            <img src="images/logo-sm.png" alt="Bootstrap" width="auto" height="50">
+        </a>
+        <!-- Contenedor para los botones con ms-auto para empujarlos a la derecha -->
+<div class="d-flex ms-auto">
+    <!-- Botón visible solo en pantallas medianas (md) y más grandes -->
+    <button type="button" class="btn btn-md d-md-block d-none custom-btn-signin ms-2">
+        <i class="bi bi-box-arrow-in-right"></i> Inicio Sesión
+    </button>
+    <!-- Botón visible solo en pantallas medianas (md) y más grandes -->
+    <button type="button" class="btn btn-md d-md-block d-none custom-btn-Register ms-2">
+        Regístrate
+    </button>
+    <!-- Botón visible solo en pantallas pequeñas (sm) y extra pequeñas (xs) -->
+    <button type="button" class="btn btn-sm d-block d-md-none custom-btn-signin ms-2">
+        <i class="bi bi-box-arrow-in-right"></i> Inicio Sesión
+    </button>
+</div>
 
-    <main>
-        <section id="seccion1">
-            <h2>Sección 1</h2>
-            <p>Contenido de la sección 1.</p>
-        </section>
-        
-        <section id="seccion2">
-            <h2>Sección 2</h2>
-            <p>Contenido de la sección 2.</p>
-        </section>
-        
-        <section id="seccion3">
-            <h2>Sección 3</h2>
-            <p>Contenido de la sección 3.</p>
-        </section>
-    </main>
-    
-    <footer>
-        <p>Pie de página</p>
-    </footer>
+    </div>
+</nav>
+
+    </div>
+</nav>
+
+    </nav>   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
