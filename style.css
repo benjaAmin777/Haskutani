@@ -39,3 +39,23 @@
     width: 5rem  !important;
     height: 5rem  !important;
 }
+
+
+/* card de pagina de inicio */
+.card-img {
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-title{
+    color: #e9e615 !important;
+}
+.bg-customCard{
+    background-color: #a09999c8 !important;
+
+    color: #ffffff !important;
+}
+.card-text{
+    text-align: justify;
+
+}
