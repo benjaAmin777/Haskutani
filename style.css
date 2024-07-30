@@ -29,5 +29,13 @@
     color: #838383 !important;
 }
 
-
-
+.fondos{
+    background-color: #838383 !important; 
+}
+.letras{
+    color: #e9e615 !important;
+}
+.iconos{
+    width: 5rem  !important;
+    height: 5rem  !important;
+}
