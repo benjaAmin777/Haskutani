@@ -1,3 +1,7 @@
+/* color de la pagina*/
+body{
+    background-color: #f8f9fa !important;
+}
 /* barra de navegacion */
 .navbar{
     background-color: #838383;
@@ -45,7 +49,7 @@
 .card-img {
     height: 100% !important;
     object-fit: cover !important;
-}
+} 
 
 .card-title{
     color: #e9e615 !important;
@@ -60,6 +64,15 @@
 
 }
 
-footer {
-    width: 100%;
+/* footer */
+.bg-cFooter{
+    background-color: #3b3a3a !important;
+    color: white !important;
+}
+
+.card-grupo-custom a{
+    color: white;
+}
+.card-grupo-custom a:hover{
+    color: #9b9b9b;
 }
