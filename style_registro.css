@@ -1,84 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar .btn-secondary {
+    width: 120px; /* Ajusta el ancho según sea necesario */
+    margin-left: auto;
+    padding: 5px 1px; /* Ajusta el padding según sea necesario */
+    font-size: 14px; /* Ajusta el tamaño de la fuente si es necesario */
+    height: 40px; /* Ajusta la altura del botón */
+    line-height: 30px; /* Ajusta la línea de altura para centrar el texto verticalmente */
+    border-radius: 50px; /* Esquinas redondeadas */
+    background: linear-gradient(90deg, #3f3f3e 0%, #2d2d2d 100%); /* Color de fondo */
+    border: none; /* Quita el borde predeterminado si lo hay */
+    text-align: center; /* Centra el texto dentro del botón */
+    display: inline-block; /* Asegúrate de que el botón ajuste su tamaño al contenido */
+}
+
+
+/* Estilo para la barra de navegación */
+.navbar-custom {
+    background-color: #868686; /* Gris claro */
+}
 
 body {
-    background: linear-gradient(90deg, #e6e5e2 0%, #ffffff 35%, #ffffff 100%);
+    background: linear-gradient(90deg, #ffffff 0%, #ffffff 35%, #ffffff 100%);
     font-family: 'Poppins', sans-serif;
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
 
-.navbar {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000; /* Asegura que el navbar esté por encima del contenido */
-}
-
-.navbar .navbar-brand {
-    color: #ffffff; /* Color del texto del botón */
-    background-color: #dda631; /* Color de fondo del botón */
-    padding: 3px 12px; /* Espaciado alrededor del texto */
-    border-radius: 5px; /* Bordes redondeados */
-    font-weight: bold; /* Texto en negrita */
-    text-align: center;
-    display: inline-block;
-    text-decoration: none; /* Sin subrayado */
-    margin-left: auto; /* Mueve el botón hacia la derecha */
-    margin-right: 20px; /* Ajusta el espacio al borde derecho */
-}
-
-.navbar .navbar-brand:hover {
-    background-color: #e2d35f; /* Color de fondo al pasar el ratón */
 }
 
 form {
-    width: 50%;
-    max-width: 600px;
-    background-color: white;
-    padding: 40px;
     border-radius: 20px;
-    margin-top: 60px; /* Espacio para el navbar */
+    background-color: white !important;
+    padding: 50px;
+}
+
+.btn-primary {
+    width: 48%;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #e1be20 0% 100%);
+}
+
+.btn-secondary {
+    width: 48%;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #3f3f3e 100%);
 }
 
 .form-control {
-    color: rgba(0,0,0,.87);
+    color: rgba(0, 0, 0, .87);
+    border-bottom-color: rgba(0, 0, 0, .42);
     box-shadow: none !important;
     border: none;
-    border-bottom: 1px solid rgba(0,0,0,.42);
+    border-bottom: 1px solid;
     border-radius: 4px 4px 0 0;
 }
 
 h4 {
-    font-size: 1.5rem;
+    font-size: 2rem !important;
     font-weight: 700;
 }
 
 .form-label {
-    font-weight: 800;
+    font-weight: 800 !important;
 }
 
-.btn-primary {
-    width: 45%;
-    border: none;
-    border-radius: 50px;
-    background: linear-gradient(90deg, #826a00 0%, #433a1a 35%, #612217 100%);
-}
-
-.btn-secondary {
-    width: 45%;
-    border: none;
-    border-radius: 50px;
-    background-color: #6c757d; /* Gris oscuro */
-    color: white;
-}
 
 @media only screen and (max-width: 600px) {
     form {
-        width: 90%;
+        width: 100% !important;
     }
 }

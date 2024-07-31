@@ -6,6 +6,26 @@
     box-sizing: border-box;
 }
 
+.navbar .btn-secondary {
+    width: 120px; /* Ajusta el ancho según sea necesario */
+    margin-left: auto;
+    padding: 5px 1px; /* Ajusta el padding según sea necesario */
+    font-size: 14px; /* Ajusta el tamaño de la fuente si es necesario */
+    height: 40px; /* Ajusta la altura del botón */
+    line-height: 30px; /* Ajusta la línea de altura para centrar el texto verticalmente */
+    border-radius: 50px; /* Esquinas redondeadas */
+    background: linear-gradient(90deg, #3f3f3e 0%, #2d2d2d 100%); /* Color de fondo */
+    border: none; /* Quita el borde predeterminado si lo hay */
+    text-align: center; /* Centra el texto dentro del botón */
+    display: inline-block; /* Asegúrate de que el botón ajuste su tamaño al contenido */
+}
+
+
+/* Estilo para la barra de navegación */
+.navbar-custom {
+    background-color: #a00c0c; /* Gris claro */
+}
+
 body {
     background: linear-gradient(90deg, #dfdede 0%, #ffffff 35%, #ffffff 100%);
     font-family: 'Poppins', sans-serif;
@@ -23,7 +43,7 @@ form {
     width: 100%;
     border: none;
     border-radius: 50px;
-    background: linear-gradient(90deg, #826a00 0%, #433a1a 35%, #612217 100%);
+    background: linear-gradient(90deg, #d4b321 0%, #d4b321  35%, #d4b321  100%);
 }
 
 .form-control {
