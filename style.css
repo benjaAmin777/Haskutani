@@ -72,6 +72,7 @@ body{
 
 .card-grupo-custom a{
     color: white;
+    border: none !important;
 }
 .card-grupo-custom a:hover{
     color: #9b9b9b;
