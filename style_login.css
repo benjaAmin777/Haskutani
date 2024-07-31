@@ -43,7 +43,8 @@ form {
     width: 100%;
     border: none;
     border-radius: 50px;
-    background: linear-gradient(90deg, #d4b321 0%, #d4b321  35%, #d4b321  100%);
+    background: linear-gradient(90deg, #e9e615 0%, #e9e615  35%, #e9e615  100%);
+    color: black;
 }
 
 .form-control {
