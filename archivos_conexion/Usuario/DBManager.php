@@ -33,19 +33,21 @@ class DBManager {
     public function show()//Por defecto p es null, pero si le mando algo p va a valer eso que yo mande
     {
         $link = $this->open();
+        $sql = "SELECT idUsuario, nombre, correo, contrasenia FROM Usuario";
+        $query = mysqli_query($link, $sql);
 
-        $sql = "SELECT nombre, correo, contrasenia FROM Usuario";
+        if (!$query) {
+            die('Error en la consulta: ' . mysqli_error($link));
+        }
 
-        $result = mysqli_query($link, $sql, MYSQLI_ASSOC) or die('Error query');
-
-        $rows = [];
-        while($columns = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-            $rows[] = $columns;
+        $usuarios = [];
+        while ($row = mysqli_fetch_assoc($query)) {
+            $usuarios[] = $row;
         }
 
         $this->close($link);
 
-        return $rows;
+        return $usuarios;
     }
 
     public function add($nombre, $correo, $contrasenia)
@@ -80,7 +82,7 @@ class DBManager {
 
     }
 
-    public function edit($id, $strikes, $activo)
+    public function edit($id, $nombre)
     {
         $link = $this->open();
 
@@ -93,8 +95,9 @@ class DBManager {
 		// Tipos: i para enteros, s para string, d para double y b para blob
 		mysqli_stmt_bind_param(
             $query, 
-            "s", //Se remplazan con 3 s ya que los tres datos son string
-            $nombre
+            "si", //Se remplazan con 3 s ya que los tres datos son string
+            $nombre,
+            $id
         );
 
         // Ejecuta la query

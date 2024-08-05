@@ -5,14 +5,18 @@
     $db = new DBManager();
 
 
-    if(isset($_POST["nombre"])){
-        $nombre = $_POST["nombre"];
+    // Obtener los datos JSON enviados
+    $data = json_decode(file_get_contents('php://input'), true);
+
+
+    if (isset($data["nombre"])) {
+        $nombre = $data["nombre"];
     }
-    if(isset($_POST['correo'])){
-        $correo = $_POST['correo'];
+    if (isset($data['correo'])) {
+        $correo = $data['correo'];
     }
-    if(isset($_POST["contrasenia"])){
-        $contrasenia = $_POST["contrasenia"];
+    if (isset($data["contrasenia"])) {
+        $contrasenia = $data["contrasenia"];
     }
 
     // Verificar si el correo ya existe
@@ -24,14 +28,11 @@
     $checkEmail->close();
 
     if ($result->num_rows > 0) {
-        $error = "Este correo ya está registrado.";
-        header("Location: ../../registro.html?error=" . urlencode($error));
-        exit();
+        $response = ["status" => "error", "message" => "Este correo ya está registrado."];
     } else {
-        $result = $db -> add($nombre, $correo, $contrasenia);
-        header("Location: ../../focos.html");
-        echo $result;
+        $result = $db->add($nombre, $correo, $contrasenia);
+        $response = ["status" => "success", "message" => $result];
     }
 
-
+    echo json_encode($response);
 ?>
