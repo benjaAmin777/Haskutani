@@ -6,5 +6,11 @@ import { Usuario } from './Usuario.js';
         const contrasenia = document.getElementById('contrasenia').value;
 
         const usuario = new Usuario(null, correo, contrasenia);
-        usuario.login();
+        if (usuario.login()) {
+            localStorage.setItem('usuario', JSON.stringify(usuario));
+            alert('Inicio de sesión exitoso');
+            window.location.href = "./focos.html"; 
+        }else{
+            alert('Correo o contraseña incorrectos');
+        }
     });

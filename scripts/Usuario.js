@@ -49,12 +49,12 @@ export class Usuario {
             });
 
             if (usuarioEncontrado) {
-                alert('Inicio de sesión exitoso');
-                window.location.href = "./focos.html"; // Redirige a la página deseada después del login
-                return;
+                this.nombre=usuarioEncontrado.nombre;
+                this.correo=usuarioEncontrado.correo;
+                this.contrasenia=usuarioEncontrado.contrasenia;
+                return true;
             } else {
-                alert('Correo o contraseña incorrectos');
-                return ;
+                return false;
             }
         } catch (error) {
             console.error('Error al obtener usuarios:', error);
