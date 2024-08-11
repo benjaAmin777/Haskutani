@@ -1,0 +1,16 @@
+#offcanvasNavbar{
+    background-color: #838383;
+    color: #e9e615;
+}
+
+/* las letras de lo que muestra el navbar */
+
+/* el color de la letra de la pagina que está activa  */
+.text-custom-yellow-active{
+    color: #e9e615 !important;
+}
+
+/* el color de la letra de la pagina que está inactiva */
+.text-custom-yellow-non{
+    color: #b6b412 !important;
+}

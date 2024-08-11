@@ -13,20 +13,64 @@
     <link rel="icon" type="image/x-icon" href="images/icon.png">
     <!-- Estilos propios -->
     <link href="style.css" rel="stylesheet">
+    <link href="style_focos.css" rel="stylesheet" >
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- script necesario para el navBar -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+    <nav class="navbar  fixed-top">
+        <div class="container-fluid">
+            <!-- logo -->
+          <!-- Logo en pantallas medianas y más grandes: imagen del logo -->
+          <a class="navbar-brand d-md-block d-none" href="#">
+            <img src="images/logo-lg.png" alt="Bootstrap" width="auto" height="50">
+            </a>
+            <!-- Logo en pantallas pequeñas y extra pequeñas: imagen del logo -->
+            <a class="navbar-brand d-md-none d-block" href="#">
+                <img src="images/logo-sm.png" alt="Bootstrap" width="auto" height="50">
+            </a>
+            <!-- toggle button -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" >
+            <div class="offcanvas-header">
+                <!-- titulo del canva  del toggle-->
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Mi perfil</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
 
-    <h1>Bienvenido</h1>
+
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active text-custom-yellow-active" aria-current="page" href="#"><i class="bi bi-house"></i> Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-custom-yellow-non" href="#"><i class="bi bi-lightbulb"></i> Dispositivos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-custom-yellow-non" href="#"> <i class="bi bi-plug"></i> Datos de Consumo</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+    </nav>
     <div id="userInfo"></div>
 
 
 
+
     <!--Script Focos-->
-    <script type="module" src="scripts/Foco.js"></script>
-    
+    <!-- <script type="module" src="scripts/Foco.js"></script> -->
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12lHcf6riP93MBQkKbnqCq4G9YdM/3uw7gBPct4d6CxB2n6L" crossorigin="anonymous"></script>
 </body>
-</html>
