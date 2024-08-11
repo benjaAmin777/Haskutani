@@ -14,3 +14,8 @@
 .text-custom-yellow-non{
     color: #b6b412 !important;
 }
+
+/* su hover */
+.text-custom-yellow-non:hover{
+    color: #e9e615 !important;
+}
