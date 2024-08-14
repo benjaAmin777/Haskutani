@@ -19,3 +19,13 @@
 .text-custom-yellow-non:hover{
     color: #e9e615 !important;
 }
+
+
+/* TODO LO QUE SALE EN LA MAMADA DE DISPOSITIVOS VINCULADOS */
+/* tarjetas */
+#foco_name{
+    color: black !important;
+}
+#status_foco{
+    color: #a49e9e;
+}
