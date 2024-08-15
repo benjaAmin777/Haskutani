@@ -29,3 +29,8 @@
 #status_foco{
     color: #a49e9e;
 }
+
+/* Aplica el estilo usando un ID para mayor especificidad */
+#welcome-title {
+    color: #e96615 !important; /* Usa !important para forzar el estilo ohhhh */
+}
