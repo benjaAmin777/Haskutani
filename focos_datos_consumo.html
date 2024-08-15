@@ -90,6 +90,10 @@
                     <label for="fechaCorte" class="form-label">Fecha de Corte:</label>
                     <input type="date" class="form-control" id="fechaCorte">
                 </div>
+                <div class="col-md-6 mb-3">
+                    <label for="porcentajeConsumo" class="form-label">Porcentaje de Consumo:</label>
+                    <input type="number" class="form-control" id="porcentajeConsumo" placeholder="Ingrese el porcentaje de consumo">
+                </div>
             </div>
             <button type="button" class="btn btn-primary" onclick="updateChart()">Actualizar Gráfica</button>
         </form>
@@ -97,6 +101,11 @@
         <!-- Gráfica -->
         <div class="mt-5">
             <canvas id="consumoChart"></canvas>
+        </div>
+
+        <!-- Gráfica Circular -->
+        <div class="mt-5">
+            <canvas id="circularChart"></canvas>
         </div>
     </div>
 
@@ -147,18 +156,53 @@
             }
         });
 
-        // Función para actualizar la gráfica con los datos del formulario
+        // Gráfica Circular
+        const ctxCircular = document.getElementById('circularChart').getContext('2d');
+        const circularChart = new Chart(ctxCircular, {
+            type: 'doughnut',
+            data: {
+                labels: ['Consumo', 'Restante'],
+                datasets: [{
+                    data: [0, 100], // Datos iniciales
+                    backgroundColor: [
+                        'rgba(240, 192, 0, 0.8)', // Amarillo
+                        'rgba(169, 169, 169, 0.6)' // Gris
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '50%', // Para crear el hueco en medio
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Porcentaje de Consumo de Luz'
+                    }
+                }
+            }
+        });
+
         function updateChart() {
             const watts = document.getElementById('watts').value;
             const gasto = document.getElementById('gasto').value;
             const fechaInicio = document.getElementById('fechaInicio').value;
             const fechaCorte = document.getElementById('fechaCorte').value;
+            const porcentajeConsumo = document.getElementById('porcentajeConsumo').value;
 
             // Aqui actualizo los datos de la grafica
             consumoChart.data.labels = [fechaInicio, fechaCorte];
             consumoChart.data.datasets[0].data = [0, watts];
             consumoChart.data.datasets[1].data = [0, gasto];
             consumoChart.update();
+
+            // Actualizar la gráfica circular
+            circularChart.data.datasets[0].data = [porcentajeConsumo, 100 - porcentajeConsumo];
+            circularChart.update();
         }
     </script>
 </body>
