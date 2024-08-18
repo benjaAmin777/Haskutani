@@ -1,4 +1,4 @@
-import { Usuario } from './Usuario.js';
+import { Usuario } from './clases/Usuario.js';
 
 document.getElementById('registroForm').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -7,7 +7,7 @@ document.getElementById('registroForm').addEventListener('submit', function(even
     const correo = document.getElementById('correo').value;
     const contrasenia = document.getElementById('contrasenia').value;
 
-    const usuario = new Usuario(nombre, correo, contrasenia);
+    const usuario = new Usuario(null, nombre, correo, contrasenia);
     usuario.registro();
 });
 
