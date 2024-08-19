@@ -1,9 +1,15 @@
-export class Foco {
-    constructor(idUsuario, nombre, correo, contrasenia, fecha_registro) {
-        this.idUsuario = idUsuario;
-        this.nombre = nombre;
-        this.correo = correo;
-        this.contrasenia = contrasenia;
-        this.fecha_registro = fecha_registro;
+class Foco {
+    constructor(idFoco, direccionMac, locacion, wattsAcumulados, estado, humedad, temperatura, fecha_Inicio, Usuario_idUsuario) {
+      this.idFoco = idFoco;
+      this.direccionMac = direccionMac;
+      this.locacion = locacion;
+      this.wattsAcumulados = wattsAcumulados;
+      this.estado = estado;
+      this.humedad = humedad;
+      this.temperatura = temperatura;
+      this.fecha_Inicio = fecha_Inicio;
+      this.Usuario_idUsuario = Usuario_idUsuario;
     }
-}
+  
+  }
+  
