@@ -97,6 +97,7 @@
                         <p id="user_email" class="card-text">usuario@ejemplo.com</p>
                         <p id="user_role" class="card-text">Rol: Administrador</p>
                         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editProfileModal"><i class="bi bi-pencil-square"></i> Editar Perfil</button>
+                        <button class="btn btn-danger" onclick="window.location.href='login.html'"><i class="bi bi-door-open-fill"></i> Cerrar Sesión</button>
                     </div>
                 </div>
             </div>
@@ -112,25 +113,8 @@
                     </div>
                 </div>
 
-                <div class="card mt-3">
-                    <div class="card-body">
-                        <h4 class="card-title">Configuración de Cuenta</h4>
-                        <button class="btn btn-secondary"><i class="bi bi-gear"></i> Ajustes de Cuenta</button>
-                        <button class="btn btn-danger" onclick="window.location.href='login.html'"><i class="bi bi-door-open-fill"></i> Cerrar Sesión</button>
-                    </div>
-                </div>
 
-                <div class="card mt-3">
-                    <div class="card-body">
-                        <h4 class="card-title">Historial de Actividad</h4>
-                        <ul class="list-group">
-                            <li class="list-group-item">Inició sesión el 14/08/2024</li>
-                            <li class="list-group-item">Cambió su contraseña el 01/08/2024</li>
-                            <li class="list-group-item">Actualizó su perfil el 28/07/2024</li>
-                            <!-- Agrega más elementos de historial aquí -->
-                        </ul>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -153,13 +137,22 @@
                             <label for="editProfileEmail" class="form-label">Correo Electrónico</label>
                             <input type="email" class="form-control" id="editProfileEmail" value="">
                         </div>
-                        <div class="mb-3">
+                        <!-- lista desplegable cancelada por temas de diseño -->
+                        <!-- <div class="mb-3">
                             <label for="editProfileRole" class="form-label">Rol</label>
                             <select class="form-select" id="editProfileRole">
                                 <option value="admin">Administrador</option>
-                                <option value="user">Usuario</option>
+                                <option value="user">Usuario</option> -->
                                 <!-- Agrega más roles según tus necesidades -->
-                            </select>
+                            <!-- </select>
+                        </div> -->
+                        <div class="mb-3">
+                            <label for="editProfileEmail" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="editProfileEmail" value="">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editProfileEmail" class="form-label">Confirmar Contraseña</label>
+                            <input type="password" class="form-control" id="editProfileEmail" value="">
                         </div>
                         <div class="mb-3">
                             <label for="editProfileImage" class="form-label">Foto de Perfil</label>
@@ -168,6 +161,7 @@
                         <button type="button" class="btn btn-primary" onclick="saveProfileChanges()">Guardar Cambios</button>
                     </form>
                 </div>
+                
             </div>
         </div>
     </div>
