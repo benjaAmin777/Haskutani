@@ -1,3 +1,5 @@
+import { Usuario } from "./clases/Usuario";
+
 document.addEventListener('DOMContentLoaded', function() {
     // Recuperar el objeto usuario de localStorage
     const usuarioJSON = sessionStorage.getItem('usuario');
@@ -11,20 +13,32 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('user_email').textContent = usuarioObj.correo; // Cambia 'correo' por la propiedad correcta de tu objeto
 
         const usuario = document.getElementById('user');
-        usuario.textContent = usuario.textContent + usuarioObj.nombre;
+        usuario.textContent = usuario.textContent +' ' + usuarioObj.nombre;
 
         const correo =  document.getElementById('correo');
-        correo.textContent = correo.textContent + usuarioObj.correo;
+        correo.textContent = correo.textContent +' ' + usuarioObj.correo;
 
         const fecha = document.getElementById('fecha');
-        fecha.textContent = fecha.textContent + usuarioObj.fecha_registro;
+        fecha.textContent = fecha.textContent +' ' + usuarioObj.fecha_registro;
 
-
+        
     } else {
         alert('No hay información del usuario');
         // Redirigir al usuario de vuelta a la página de inicio de sesión si no hay información del usuario
         window.location.href = './index.html';
     }
+});
+
+
+document.getElementById('editProfileForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const nombre = document.getElementById('nombre').value;
+    const correo = document.getElementById('correo').value;
+    const contrasenia = document.getElementById('contrasenia').value;
+
+    const usuario = new Usuario(null, nombre, correo, contrasenia, null);
+    usuario.registro();
 });
 
 
