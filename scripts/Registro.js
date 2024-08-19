@@ -7,7 +7,7 @@ document.getElementById('registroForm').addEventListener('submit', function(even
     const correo = document.getElementById('correo').value;
     const contrasenia = document.getElementById('contrasenia').value;
 
-    const usuario = new Usuario(null, nombre, correo, contrasenia);
+    const usuario = new Usuario(null, nombre, correo, contrasenia, null);
     usuario.registro();
 });
 

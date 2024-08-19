@@ -12,7 +12,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
         const usuariosData = await response.json(); // Obtener la lista de usuarios como JSON
         
         // Crear un array de instancias de la clase Usuario
-        const usuarios = usuariosData.map(data => new Usuario(data.idUsuario, data.nombre, data.correo, data.contrasenia));
+        const usuarios = usuariosData.map(data => new Usuario(data.idUsuario, data.nombre, data.correo, data.contrasenia, data.fecha_registro));
         
         // Buscar el usuario con `find()` para obtener el objeto directamente
         const user = usuarios.find(usuario => usuario.correo === correo && usuario.contrasenia === contrasenia);
