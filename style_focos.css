@@ -1,36 +1,35 @@
-#offcanvasNavbar{
-    background-color: #838383;
-    color: #e9e615;
+#offcanvasNavbar {
+    background-color: #3E497A; /* Azul medianoche */
+    color: #F1D00A; /* Amarillo brillante */
 }
 
-/* las letras de lo que muestra el navbar */
+/* Las letras de lo que muestra el navbar */
 
-/* el color de la letra de la pagina que está activa  */
-.text-custom-yellow-active{
-    color: #e9e615 !important;
+/* El color de la letra de la página que está activa */
+.text-custom-yellow-active {
+    color: #F1D00A !important; /* Amarillo brillante */
 }
 
-/* el color de la letra de la pagina que está inactiva */
-.text-custom-yellow-non{
-    color: #b6b412 !important;
+/* El color de la letra de la página que está inactiva */
+.text-custom-yellow-non {
+    color: #F0F0F0 !important; /* Gris claro */
 }
 
-/* su hover */
-.text-custom-yellow-non:hover{
-    color: #e9e615 !important;
+/* Su hover */
+.text-custom-yellow-non:hover {
+    color: #F1D00A !important; /* Amarillo brillante */
 }
-
 
 /* TODO LO QUE SALE EN LA MAMADA DE DISPOSITIVOS VINCULADOS */
-/* tarjetas */
-#foco_name{
-    color: black !important;
+/* Tarjetas */
+#foco_name {
+    color: #21325E !important; /* Azul oscuro */
 }
-#status_foco{
-    color: #a49e9e;
+#status_foco {
+    color: #3f3f3f !important; /* Gris claro */
 }
 
 /* Aplica el estilo usando un ID para mayor especificidad */
 #welcome-title {
-    color: #e96615 !important; /* Usa !important para forzar el estilo ohhhh */
+    color: #F1D00A !important; /* Amarillo brillante */
 }

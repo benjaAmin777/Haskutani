@@ -14,12 +14,12 @@
     height: 40px; /* Ajusta la altura del botón */
     line-height: 30px; /* Ajusta la línea de altura para centrar el texto verticalmente */
     border-radius: 50px; /* Esquinas redondeadas */
-    background: linear-gradient(90deg, #3f3f3e 0%, #2d2d2d 100%); /* Color de fondo */
+    background: linear-gradient(90deg, #21325E 0%, #3E497A 100%); /* Color de fondo: de azul oscuro a azul medianoche */
     border: none; /* Quita el borde predeterminado si lo hay */
     text-align: center; /* Centra el texto dentro del botón */
+    color: #F0F0F0; /* Texto en gris claro */
     display: inline-block; /* Asegúrate de que el botón ajuste su tamaño al contenido */
 }
-
 
 /* Estilo para la barra de navegación */
 .navbar-custom {
@@ -43,8 +43,8 @@ form {
     width: 100%;
     border: none;
     border-radius: 50px;
-    background: linear-gradient(90deg, #e9e615 0%, #e9e615  35%, #e9e615  100%);
-    color: black;
+    background: linear-gradient(90deg, #21325E  0%, #21325E   35%, #21325E 100%);
+    color: rgb(255, 255, 255);
 }
 
 .form-control {
