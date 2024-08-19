@@ -1,4 +1,4 @@
-// import { Usuario } from './clases/Usuario.js';
+import { Usuario } from './clases/Usuario.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     // Recuperar el objeto usuario de localStorage
@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (usuarioJSON) {
         // Parsear el JSON a un objeto plano
         const usuarioObj = JSON.parse(usuarioJSON);
-        console.log(usuarioObj);
+        const user =  new Usuario (usuarioObj.idUsuario, usuarioObj.nombre, usuarioObj.correo, usuarioObj.contrasenia, usuarioObj.fecha_registro);
+        console.log(user);
     } else {
         alert('No hay información del usuario');
         // Redirigir al usuario de vuelta a la página de inicio de sesión si no hay información del usuario

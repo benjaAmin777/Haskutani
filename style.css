@@ -1,50 +1,51 @@
 /* color de la pagina*/
-body{
-    background-color: #f8f9fa !important;
+body {
+    background-color: #F0F0F0 !important; /* Gris claro */
 }
+
 /* barra de navegacion */
-.navbar{
-    background-color: #838383;
+.navbar {
+    background-color: #21325E; /* Azul oscuro */
 }
 
 /* botones de sigin/register */
 .custom-btn-signin {
-    background-color: #838383 !important; 
-    border-color: #e9e615 !important;
-    color: #e9e615 !important;
+    background-color: #21325E !important; /* Azul oscuro */
+    border-color: #F1D00A !important; /* Amarillo brillante */
+    color: #F1D00A !important; /* Amarillo brillante */
 }
 
 .custom-btn-Register {
-    background-color: #e9e615 !important; 
-    border-color: #e9e615 !important;
-    color: #838383 !important;
+    background-color: #F1D00A !important; /* Amarillo brillante */
+    border-color: #F1D00A !important; /* Amarillo brillante */
+    color: #21325E !important; /* Azul oscuro */
 }
 
 /* botones sigin/register: hover */
 .custom-btn-signin:hover {
-    background-color: #838383 !important; 
-    border-color: #b6b412 !important;
-    color: #b6b412 !important;
+    background-color: #3E497A !important; /* Azul medianoche */
+    border-color: #F1D00A !important; /* Amarillo brillante */
+    color: #F1D00A !important; /* Amarillo brillante */
 }
 
 .custom-btn-Register:hover {
-    background-color: #b6b412 !important; 
-    border-color: #b6b412 !important;
-    color: #838383 !important;
+    background-color: #3E497A !important; /* Azul medianoche */
+    border-color: #3E497A !important; /* Azul medianoche */
+    color: #F0F0F0 !important; /* Gris claro */
 }
 
-
-.fondos{
-    background-color: #838383 !important; 
-}
-.letras{
-    color: #e9e615 !important;
-}
-.iconos{
-    width: 5rem  !important;
-    height: 5rem  !important;
+.fondos {
+    background-color: #21325E !important; /* Azul oscuro */
 }
 
+.letras {
+    color: #F1D00A !important; /* Amarillo brillante */
+}
+
+.iconos {
+    width: 5rem !important;
+    height: 5rem !important;
+}
 
 /* card de pagina de inicio */
 .card-img {
@@ -52,29 +53,31 @@ body{
     object-fit: cover !important;
 } 
 
-.card-title{
-    color: #e9e615 !important;
+.card-title {
+    color: #000000 !important; /* Negro */
 }
-.bg-customCard{
-    background-color: #a09999c8 !important;
 
-    color: #ffffff !important;
+.bg-customCard {
+    background-color: #ffffff !important; /* Blanco */
+    color: #000000 !important; /* Negro */
 }
-.card-text{
+
+.card-text {
     text-align: justify;
-
+    color: #000000 !important; /* Negro */
 }
 
 /* footer */
-.bg-cFooter{
-    background-color: #3b3a3a !important;
-    color: white !important;
+.bg-cFooter {
+    background-color: #21325E !important; /* Azul oscuro */
+    color: #F0F0F0 !important; /* Gris claro */
 }
 
-.card-grupo-custom a{
-    color: white;
+.card-grupo-custom a {
+    color: #F0F0F0 !important; /* Gris claro */
     border: none !important;
 }
-.card-grupo-custom a:hover{
-    color: #9b9b9b;
+
+.card-grupo-custom a:hover {
+    color: #F1D00A !important; /* Amarillo brillante */
 }
