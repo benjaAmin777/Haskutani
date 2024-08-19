@@ -54,7 +54,7 @@ class DBManager {
     {
         $link = $this->open();
 
-        $sql = "INSERT INTO Usuario(nombre,correo,contrasenia) VALUES(?,?,?)";
+        $sql = "INSERT INTO Usuario(nombre,correo,contrasenia,fecha_registro) VALUES(?,?,?,CURDATE())";
 
         // Prepara la consulta
 		$query = mysqli_prepare($link, $sql);
