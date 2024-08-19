@@ -1,4 +1,4 @@
-/* color de la pagina*/
+/* color de la pagina */
 body {
     background-color: #F0F0F0 !important; /* Gris claro */
 }
@@ -79,5 +79,19 @@ body {
 }
 
 .card-grupo-custom a:hover {
-    color: #F1D00A !important; /* Amarillo brillante */
+    color: #F1D00A !important; /* Amarillo brillante */
+}
+
+/* Estilos para los botones del menú */
+.text-custom-yellow-non {
+    color: #F1D00A !important; /* Amarillo brillante */
+}
+
+.text-custom-yellow-active {
+    color: #F1D00A !important; /* Amarillo brillante */
+}
+
+/* Estilo para el botón toggler del menú */
+.navbar-toggler {
+    background-color: #F1D00A !important; /* Amarillo brillante */
 }
