@@ -111,7 +111,7 @@ function sendMessage(action, percentage, macAddress) {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ request: request }),
+        body: JSON.stringify({ "request": request }),
         mode: 'no-cors',
     })
     .then(response => response.json())
