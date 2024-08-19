@@ -55,7 +55,8 @@ export class Usuario {
         .then(data => {
             if (data.status === "success") {
                 alert('Registro exitoso');
-                window.location.href = "./login.html";
+                localStorage.setItem('usuario', JSON.stringify(this));
+                window.location.href = "./focos.html";
             } else {
                 alert(data.message);
             }
