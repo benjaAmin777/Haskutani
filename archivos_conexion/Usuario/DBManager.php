@@ -83,31 +83,36 @@ class DBManager {
     }
 
     public function edit($id, $nombre, $contrasenia)
-    {
-        $link = $this->open();
+{
+    $link = $this->open();
 
-        $sql = "UPDATE Usuario SET nombre=?, contrasenia=? WHERE idUsuario=?";
+    // Prepara la consulta SQL
+    $sql = "UPDATE Usuario SET nombre=?, contrasenia=? WHERE idUsuario=?";
 
-        // Prepara la consulta
-		$query = mysqli_prepare($link, $sql);
+    // Prepara la declaración
+    $query = mysqli_prepare($link, $sql);
 
-        // Enlaza los parametros (reemplaza comodines)
-		// Tipos: i para enteros, s para string, d para double y b para blob
-		mysqli_stmt_bind_param(
-            $query, 
-            "si", //Se remplazan con 3 s ya que los tres datos son string
-            $nombre,
-            $contrasenia,
-            $id
-        );
-
-        // Ejecuta la query
-		$resultado = mysqli_stmt_execute($query) or die('Error insert');
-
-        $this->close($link);
-
-        return $resultado;
+    if (!$query) {
+        die('Error en la preparación de la consulta: ' . mysqli_error($link));
     }
+
+    // Enlaza los parámetros
+    // "ssi" - s: string, i: entero
+    mysqli_stmt_bind_param($query, "ssi", $nombre, $contrasenia, $id);
+
+    // Ejecuta la consulta
+    $resultado = mysqli_stmt_execute($query);
+
+    if (!$resultado) {
+        die('Error al ejecutar la consulta: ' . mysqli_stmt_error($query));
+    }
+
+    // Cierra la conexión
+    $this->close($link);
+
+    return $resultado;
+}
+
 
 }
 

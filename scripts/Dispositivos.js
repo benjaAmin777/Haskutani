@@ -2,7 +2,7 @@ import { Usuario } from './clases/Usuario.js';
 import { Foco } from './clases/Foco.js';
 
 document.addEventListener('DOMContentLoaded', async function() {
-    const usuarioJSON = sessionStorage.getItem('usuario');
+    const usuarioJSON = localStorage.getItem('usuario');
     if (usuarioJSON) {
         const usuarioObj = JSON.parse(usuarioJSON);
         const usuario = new Usuario(usuarioObj.idUsuario, usuarioObj.nombre, usuarioObj.correo, usuarioObj.contrasenia, usuarioObj.fecha_registro);
