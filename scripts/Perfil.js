@@ -7,8 +7,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
         console.log(usuarioObj);
 
-        // Actualizar la interfaz de usuario con los datos del usuario
-        document.getElementById('userInfo').textContent = `¡Bienvenido ${usuarioObj.nombre} a Ambe Soluciones Inteligentes!`;
+        document.getElementById('user_name').textContent = usuarioObj.nombre; // Cambia 'nombre' por la propiedad correcta de tu objeto
+        document.getElementById('user_email').textContent = usuarioObj.correo; // Cambia 'correo' por la propiedad correcta de tu objeto
+
+        const usuario = document.getElementById('user');
+        usuario.textContent = usuario.textContent + usuarioObj.nombre;
+
+        const correo =  document.getElementById('correo');
+        correo.textContent = correo.textContent + usuarioObj.correo;
+
+        const fecha = document.getElementById('fecha');
+        fecha.textContent = fecha.textContent + usuarioObj.fecha_registro;
+
+
     } else {
         alert('No hay información del usuario');
         // Redirigir al usuario de vuelta a la página de inicio de sesión si no hay información del usuario

@@ -25,45 +25,48 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <nav class="navbar fixed-top">
-        <div class="container-fluid">
-            <!-- logo -->
-          <!-- Logo en pantallas medianas y más grandes: imagen del logo -->
-          <a class="navbar-brand d-md-block d-none" href="#">
+  <nav class="navbar fixed-top mb-3">
+    <div class="container-fluid">
+        <!-- logo -->
+        <!-- Logo en pantallas medianas y más grandes: imagen del logo -->
+        <a class="navbar-brand d-md-block d-none" href="#">
             <img src="images/logo-lg.png" alt="Bootstrap" width="auto" height="50">
-            </a>
-            <!-- Logo en pantallas pequeñas y extra pequeñas: imagen del logo -->
-            <a class="navbar-brand d-md-none d-block" href="#">
-                <img src="images/logo-sm.png" alt="Bootstrap" width="auto" height="50">
-            </a>
-            
-            <!-- toggle button -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        </a>
+        <!-- Logo en pantallas pequeñas y extra pequeñas: imagen del logo -->
+        <a class="navbar-brand d-md-none d-block" href="#">
+            <img src="images/logo-sm.png" alt="Bootstrap" width="auto" height="50">
+        </a>
+        
+        <!-- toggle button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
-          
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        </button>
+      
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
-                <!-- titulo del canva  del toggle -->
-              <a class="nav-link active text-custom-yellow-non" aria-current="page" href="perfil.html"><h5><i class="bi bi-person-circle"></i> Mi perfil</h5></a>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <!-- título del canvas del toggle -->
+                <a class="nav-link active text-custom-yellow-non" aria-current="page" href="perfil.html" id="perfil">
+                    <h5><i class="bi bi-person-circle"></i> Mi perfil</h5>
+                </a>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
+
             <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active text-custom-yellow-non" aria-current="page" href="focos.html"><i class="bi bi-house-door"> </i> Inicio</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-custom-yellow-active" href="focos_dispositivos.html"><i class="bi bi-lightbulb-fill"></i> Dispositivos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-custom-yellow-non" href="focos_datos_consumo.html"> <i class="bi bi-plug"></i> Datos de Consumo</a>
-                </li>
-              </ul>
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active text-custom-yellow-non" aria-current="page" href="focos.html"><i class="bi bi-house-door-fill" id="inicio"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-custom-yellow-active" href="focos_dispositivos.html"><i class="bi bi-lightbulb" id="dispositivos"></i> Dispositivos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-custom-yellow-non" href="focos_datos_consumo.html"><i class="bi bi-plug" id="datos"></i> Datos de Consumo</a>
+                    </li>
+                </ul>
             </div>
-          </div>
         </div>
-      </nav>
+    </div>
+</nav>
 
     <div id="userInfo"></div>
     
@@ -74,36 +77,8 @@
 
     <!-- Tarjetas -->
     <div class="container m-5 p-5">
-      <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="row row-cols-1 row-cols-md-2 g-4" id="focosContainer">
         <!-- columna numero 1 -->
-        <div class="col">
-          <a  class="text-decoration-none">
-              <div class="card p-3">
-                  <!-- Imagen en la esquina superior izquierda -->
-                  <img src="images/casa-inteligente.png" class="position-absolute top-0 end-0" alt="Icono" style="width: 60px; height: 60px;">
-                  <div class="Foco cocina">
-                      <!-- nombre del foco -->
-                      <h5 id="foco_name" class="card-title">Habitación 1</h5>
-                      <!-- estatus del foco -->
-                      <p class="card-text" style="color: orange;">Encendido</p>
-                      <p id="status_foco" class="card-text">Temperatura: </p>
-                      <p id="status_foco" class="card-text">Humedad: </p>
-                      <p id="status_foco" class="card-text">Consumo: </p>
-                      
-                      <!-- Slider -->
-                      <input type="range" class="form-range mt-3" min="0" max="100" value="50" id="slider_habitacion_1">
-
-                      <!-- Botones -->
-                      <div class="d-flex justify-content-around mt-3">
-                        <button class="btn btn-success">Encendido</button>
-                        <button class="btn btn-danger">Apagado</button>
-                        <button class="btn btn-warning">Atenuar</button>
-                      </div>
-                  </div>
-              </div>
-          </a>
-        </div>
-        
         
 
       </div>

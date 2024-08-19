@@ -33,22 +33,23 @@ class DBManager {
     public function show()//Por defecto p es null, pero si le mando algo p va a valer eso que yo mande
     {
         $link = $this->open();
-        $sql = "SELECT idUsuario, nombre, correo, contrasenia FROM Usuario";
+        $sql = "SELECT * FROM foco";
         $query = mysqli_query($link, $sql);
 
         if (!$query) {
             die('Error en la consulta: ' . mysqli_error($link));
         }
 
-        $usuarios = [];
+        $focos = [];
         while ($row = mysqli_fetch_assoc($query)) {
-            $usuarios[] = $row;
+            $focos[] = $row;
         }
 
         $this->close($link);
 
-        return $usuarios;
+        return $focos;
     }
+    
 
     public function add($nombre, $correo, $contrasenia)
     {

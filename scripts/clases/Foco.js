@@ -1,4 +1,4 @@
-class Foco {
+export class Foco {
     constructor(idFoco, direccionMac, locacion, wattsAcumulados, estado, humedad, temperatura, fecha_Inicio, Usuario_idUsuario) {
       this.idFoco = idFoco;
       this.direccionMac = direccionMac;
@@ -11,5 +11,5 @@ class Foco {
       this.Usuario_idUsuario = Usuario_idUsuario;
     }
   
-  }
+}
   
