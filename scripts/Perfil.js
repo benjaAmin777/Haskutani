@@ -4,7 +4,7 @@ let usuarioObj;
 
 document.addEventListener('DOMContentLoaded', function() {
     // Recuperar el objeto usuario de sessionStorage
-    const usuarioJSON = localStorage.getItem('usuario');
+    const usuarioJSON = sessionStorage.getItem('usuario');
     
     if (usuarioJSON) {
         usuarioObj = JSON.parse(usuarioJSON);
@@ -56,19 +56,19 @@ document.getElementById('editProfileForm').addEventListener('submit', function(e
 
 const btnMenuPerfil = document.getElementById('perfil');
 btnMenuPerfil.addEventListener('click', function() {
-    localStorage.setItem('usuario', JSON.stringify(usuarioObj));
+    sessionStorage.setItem('usuario', JSON.stringify(usuarioObj));
     window.location.href = './perfil.html';
 });
 
 const btnMenuDispositivos = document.getElementById('dispositivos');
 btnMenuDispositivos.addEventListener('click', function() {
-    localStorage.setItem('usuario', JSON.stringify(usuarioObj));
+    sessionStorage.setItem('usuario', JSON.stringify(usuarioObj));
     window.location.href = './focos_dispositivos.html';
     alert('Cargando Dispositivos');
 });
 
 const btnMenuDatos = document.getElementById('datos');
 btnMenuDatos.addEventListener('click', function() {
-    localStorage.setItem('usuario', JSON.stringify(usuarioObj));
+    sessionStorage.setItem('usuario', JSON.stringify(usuarioObj));
     window.location.href = './focos_datos_consumo.html';
 });

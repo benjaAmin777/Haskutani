@@ -1,9 +1,11 @@
+
+let usuarioObj;
 document.addEventListener('DOMContentLoaded', function() {
     // Recuperar el objeto usuario de localStorage
-    const usuarioJSON = sessionStorage.getItem('usuario');
+    const usuarioJSON = localStorage.getItem('usuario');
     if (usuarioJSON) {
         // Parsear el JSON a un objeto plano
-        const usuarioObj = JSON.parse(usuarioJSON);
+        usuarioObj = JSON.parse(usuarioJSON);
 
         console.log(usuarioObj);
 
@@ -19,21 +21,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const btnMenuPerfil = document.getElementById('perfil');
 btnMenuPerfil.addEventListener('click', function(){
-    localStorage.setItem('usuario', JSON.stringify(usuarioObj));
+    sessionStorage.setItem('usuario', JSON.stringify(usuarioObj));
     window.location.href = './perfil.html';
 })
 
 
 const btnMenuDispositivos = document.getElementById('dispositivos');
 btnMenuDispositivos.addEventListener('click', function(){
-    localStorage.setItem('usuario', JSON.stringify(usuarioObj));
+    sessionStorage.setItem('usuario', JSON.stringify(usuarioObj));
     window.location.href = './focos_dispositivos.html';
-    alert('Cargando Dispositivos');
 })
 
 const btnMenuDatos = document.getElementById('datos');
 btnMenuDatos.addEventListener('click', function(){
-    localStorage.setItem('usuario', JSON.stringify(usuarioObj));
+    sessionStorage.setItem('usuario', JSON.stringify(usuarioObj));
     window.location.href = './focos_datos_consumo.html';
 })
 

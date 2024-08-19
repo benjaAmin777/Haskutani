@@ -2,7 +2,7 @@ import { Usuario } from './clases/Usuario.js';
 import { Foco } from './clases/Foco.js';
 
 document.addEventListener('DOMContentLoaded', async function() {
-    const usuarioJSON = localStorage.getItem('usuario');
+    const usuarioJSON = sessionStorage.getItem('usuario');
     if (usuarioJSON) {
         const usuarioObj = JSON.parse(usuarioJSON);
         const usuario = new Usuario(usuarioObj.idUsuario, usuarioObj.nombre, usuarioObj.correo, usuarioObj.contrasenia, usuarioObj.fecha_registro);
@@ -127,20 +127,20 @@ function sendMessage(action, percentage, macAddress) {
 
 const btnMenuPerfil = document.getElementById('perfil');
 btnMenuPerfil.addEventListener('click', function(){
-    localStorage.setItem('usuario', JSON.stringify(usuario));
+    sessionStorage.setItem('usuario', JSON.stringify(usuario));
     window.location.href = './perfil.html';
 })
 
 
 const btnMenuDispositivos = document.getElementById('dispositivos');
 btnMenuDispositivos.addEventListener('click', function(){
-    localStorage.setItem('usuario', JSON.stringify(usuario));
+    sessionStorage.setItem('usuario', JSON.stringify(usuario));
     window.location.href = './focos_dispositivos.html';
     alert('Cargando Dispositivos');
 })
 
 const btnMenuDatos = document.getElementById('datos');
 btnMenuDatos.addEventListener('click', function(){
-    localStorage.setItem('usuario', JSON.stringify(usuario));
+    sessionStorage.setItem('usuario', JSON.stringify(usuario));
     window.location.href = './focos_datos_consumo.html';
 })
