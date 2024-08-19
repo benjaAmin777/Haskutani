@@ -75,31 +75,27 @@
         <h2 class="text-center" style="color: #a49e9e;">Datos de Consumo</h2>
 
         <!-- Formulario para ingresar datos -->
-        <form id="dataForm" class="mt-4">
-            <div class="row">
-                <div class="col-md-6 mb-3">
-                    <label for="watts" class="form-label">Watts:</label>
-                    <input type="number" class="form-control" id="watts" placeholder="Ingrese los watts">
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label for="gasto" class="form-label">Gasto Monetario:</label>
-                    <input type="number" class="form-control" id="gasto" placeholder="Ingrese el gasto monetario">
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label for="fechaInicio" class="form-label">Fecha de Inicio:</label>
-                    <input type="date" class="form-control" id="fechaInicio">
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label for="fechaCorte" class="form-label">Fecha de Corte:</label>
-                    <input type="date" class="form-control" id="fechaCorte">
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label for="porcentajeConsumo" class="form-label">Porcentaje de Consumo:</label>
-                    <input type="number" class="form-control" id="porcentajeConsumo" placeholder="Ingrese el porcentaje de consumo">
-                </div>
-            </div>
-            <button type="button" class="btn btn-primary" onclick="updateChart()">Actualizar Gráfica</button>
-        </form>
+<form id="dataForm" class="mt-4">
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label for="watts" class="form-label">Watts:</label>
+            <input type="number" class="form-control" id="watts" placeholder="Watts" disabled>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label for="gasto" class="form-label">Gasto Monetario:</label>
+            <input type="number" class="form-control" id="gasto" placeholder="Gasto monetario" disabled>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label for="fechaInicio" class="form-label">Fecha de Inicio:</label>
+            <input type="date" class="form-control" id="fechaInicio" disabled>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label for="fechaCorte" class="form-label">Fecha de Corte:</label>
+            <input type="date" class="form-control" id="fechaCorte" disabled>
+        </div>
+    </div>
+    <button type="button" class="btn btn-primary" onclick="updateChart()">Actualizar Gráfica</button>
+</form>
 
         <!-- Gráfica -->
         <div class="mt-5">
