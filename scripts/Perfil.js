@@ -1,11 +1,13 @@
-import { Usuario } from "./clases/Usuario";
+import { Usuario } from './clases/Usuario.js';
 
+
+let usuarioObj
 document.addEventListener('DOMContentLoaded', function() {
     // Recuperar el objeto usuario de localStorage
     const usuarioJSON = sessionStorage.getItem('usuario');
     if (usuarioJSON) {
         // Parsear el JSON a un objeto plano
-        const usuarioObj = JSON.parse(usuarioJSON);
+        usuarioObj = JSON.parse(usuarioJSON);
 
         console.log(usuarioObj);
 
@@ -33,13 +35,24 @@ document.addEventListener('DOMContentLoaded', function() {
 document.getElementById('editProfileForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const nombre = document.getElementById('nombre').value;
-    const correo = document.getElementById('correo').value;
-    const contrasenia = document.getElementById('contrasenia').value;
+    const nombre = document.getElementById('editProfileName').value;
+    const contrasenia = document.getElementById('editProfileContra').value;
+    const confirm = document.getElementById('editConfirmContra').value;
 
-    const usuario = new Usuario(null, nombre, correo, contrasenia, null);
-    usuario.registro();
+    // No uses `textContent`, usa `value` para obtener los datos de los campos de entrada
+    if(nombre === ''){
+        nombre = usuarioObj.nombre;
+    }
+    if(contrasenia === '' && confirm === ''){
+        contrasenia = usuarioObj.contrasenia;
+        const usuario = new Usuario(usuarioObj.idUsuario, nombre, usuarioObj.correo, contrasenia, usuarioObj.fecha_registro);
+        usuario.update();
+    }else if(contrasenia === confirm){
+        const usuario = new Usuario(usuarioObj.idUsuario, nombre, usuarioObj.correo, contrasenia, usuarioObj.fecha_registro);
+        usuario.update();
+    }
 });
+
 
 
 const btnMenuPerfil = document.getElementById('perfil');

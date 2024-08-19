@@ -82,11 +82,11 @@ class DBManager {
 
     }
 
-    public function edit($id, $nombre)
+    public function edit($id, $nombre, $contrasenia)
     {
         $link = $this->open();
 
-        $sql = "UPDATE Usuario SET nombre=? WHERE idUsuario=?";
+        $sql = "UPDATE Usuario SET nombre=?, contrasenia=? WHERE idUsuario=?";
 
         // Prepara la consulta
 		$query = mysqli_prepare($link, $sql);
@@ -97,6 +97,7 @@ class DBManager {
             $query, 
             "si", //Se remplazan con 3 s ya que los tres datos son string
             $nombre,
+            $contrasenia,
             $id
         );
 

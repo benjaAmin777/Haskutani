@@ -3,22 +3,20 @@
 
     $db = new DBManager();
 
-    if(isset($_POST['id'])){
-        $id = $_POST['id'];
+    if(isset($_POST['idUsuario'])){
+        $id = $_POST['idUsuario'];
     }else{
         die ("Error, el id del usuario es requerido");
     }
-
-    $strikes = isset($_POST['strikes']) ? $_POST['strikes'] : null;
-    $activo = isset($_POST['activo']) ? $_POST['activo'] : null;
-    if($activo == "true"){
-        $activoEntero = 1;
+    
+    if (isset($data["nombre"])) {
+        $nombre = $data["nombre"];
     }
-    else{
-        $activoEntero = 0;
+    if (isset($data["contrasenia"])) {
+        $contrasenia = $data["contrasenia"];
     }
     
-    $result = $db -> edit($id, $strikes, $activoEntero);
+    $result = $db -> edit($id, $nombre, $contrasenia);
 
      echo $result;
 
