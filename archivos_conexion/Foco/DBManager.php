@@ -54,7 +54,7 @@ class DBManager {
     {
         $link = $this->open();
 
-        $sql = "INSERT INTO Usuario(nombre,correo,contrasenia,fecha_registro) VALUES(?,?,?,CURDATE())";
+        $sql = "INSERT INTO Usuario(nombre,correo,contrasenia) VALUES(?,?,?)";
 
         // Prepara la consulta
 		$query = mysqli_prepare($link, $sql);
@@ -82,31 +82,31 @@ class DBManager {
 
     }
 
-    public function edit($id, $nombre)
-    {
-        $link = $this->open();
+    // public function edit($id, $nombre)
+    // {
+    //     $link = $this->open();
 
-        $sql = "UPDATE Usuario SET nombre=? WHERE idUsuario=?";
+    //     $sql = "UPDATE Usuario SET nombre=? WHERE idUsuario=?";
 
-        // Prepara la consulta
-		$query = mysqli_prepare($link, $sql);
+    //     // Prepara la consulta
+	// 	$query = mysqli_prepare($link, $sql);
 
-        // Enlaza los parametros (reemplaza comodines)
-		// Tipos: i para enteros, s para string, d para double y b para blob
-		mysqli_stmt_bind_param(
-            $query, 
-            "si", //Se remplazan con 3 s ya que los tres datos son string
-            $nombre,
-            $id
-        );
+    //     // Enlaza los parametros (reemplaza comodines)
+	// 	// Tipos: i para enteros, s para string, d para double y b para blob
+	// 	mysqli_stmt_bind_param(
+    //         $query, 
+    //         "si", //Se remplazan con 3 s ya que los tres datos son string
+    //         $nombre,
+    //         $id
+    //     );
 
-        // Ejecuta la query
-		$resultado = mysqli_stmt_execute($query) or die('Error insert');
+    //     // Ejecuta la query
+	// 	$resultado = mysqli_stmt_execute($query) or die('Error insert');
 
-        $this->close($link);
+    //     $this->close($link);
 
-        return $resultado;
-    }
+    //     return $resultado;
+    // }
 
 }
 
