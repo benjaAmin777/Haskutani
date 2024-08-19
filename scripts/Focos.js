@@ -20,16 +20,19 @@ document.addEventListener('DOMContentLoaded', function() {
 const btnMenuPerfil = document.getElementById('perfil');
 btnMenuPerfil.addEventListener('click', function(){
     localStorage.setItem('usuario', JSON.stringify(usuario));
+    window.location.href = './perfil.html';
 })
 
 
 const btnMenuDispositivos = document.getElementById('dispositivos');
 btnMenuDispositivos.addEventListener('click', function(){
     localStorage.setItem('usuario', JSON.stringify(usuario));
+    window.location.href = './focos_dispositivos.html';
 })
 
 const btnMenuDatos = document.getElementById('datos');
 btnMenuDatos.addEventListener('click', function(){
     localStorage.setItem('usuario', JSON.stringify(usuario));
+    window.location.href = './focos_datos_consumo.html';
 })
 

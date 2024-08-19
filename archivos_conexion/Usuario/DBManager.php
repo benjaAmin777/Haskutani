@@ -33,7 +33,7 @@ class DBManager {
     public function show()//Por defecto p es null, pero si le mando algo p va a valer eso que yo mande
     {
         $link = $this->open();
-        $sql = "SELECT idUsuario, nombre, correo, contrasenia FROM Usuario";
+        $sql = "SELECT * FROM Usuario";
         $query = mysqli_query($link, $sql);
 
         if (!$query) {
