@@ -11,7 +11,7 @@
     if($result) {
         echo json_encode($result);
     } else {
-        echo json_encode(["status" => "error", "message" => "No se pudieron obtener los focos"]);
+        echo json_encode(["status" => "error", "message" => "No se pudieron obtener las lecturas"]);
     }
 
 ?>

@@ -1,11 +1,10 @@
 
-let usuarioObj;
 document.addEventListener('DOMContentLoaded', function() {
     // Recuperar el objeto usuario de localStorage
-    const usuarioJSON = localStorage.getItem('usuario');
+    const usuarioJSON = sessionStorage.getItem('usuario');
     if (usuarioJSON) {
         // Parsear el JSON a un objeto plano
-        usuarioObj = JSON.parse(usuarioJSON);
+        const usuarioObj = JSON.parse(usuarioJSON);
 
         console.log(usuarioObj);
 
